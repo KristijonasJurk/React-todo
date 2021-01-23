@@ -3,12 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-.main {
+.app {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  background-color: red;
 }
-.box {
+.home {
+  background-color: gray;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+
+/* .box {
   border: 1px solid black;
   width: 200px;
   height: 200px;
@@ -16,4 +30,4 @@
 }
 .blue {
   background-color: lightblue;
-}
+} */
