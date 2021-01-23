@@ -27,8 +27,8 @@ function App() {
         <h2>counter {counter}</h2>
         <button onClick={incrementer}>click</button>
         <button onClick={toggler}>toggle</button>
-        <Nav setToggle={setToggle} />
-        <Video nr={counter} />
+        <Nav toggle={toggle} />
+        <Video nr={counter} setToggle={toggler} />
         {/* <Nav />
         <Tweets /> */}
       </div>

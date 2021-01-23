@@ -1,22 +1,7 @@
 import React from "react";
 
-const Nav = () => {
-    return (
-        <nav>
-            <li>
-                <a>Home</a>
-            </li>
-            <li>
-                <a>Personal</a>
-            </li>
-            <li>
-                <a>Analytics</a>
-            </li>
-            <li>
-                <a>Tweets</a>
-            </li>
-        </nav>
-    )
+const Nav = (props) => {
+    return <nav>{props.toggle ? <h1>Nav</h1> : ""}</nav>
 }
 
 export default Nav;
