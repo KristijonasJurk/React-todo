@@ -10,17 +10,23 @@ import React, { useState } from 'react';
 function App() {
 
   const [counter, setCounter] = useState(0)
+  const [toggle, setToggle] = useState(false);
 
   const incrementer = () => {
-    setCounter((prev) => prev + 1);
+    setCounter(counter + 1);
     console.log(counter);
+  }
+  const toggler = () => {
+    setToggle(prev => !prev);
   }
 
   return (
     <div className="app">
       <div className="home">
+        <h1 className={toggle ? 'active' : ""}>nematomas</h1>
         <h2>counter {counter}</h2>
         <button onClick={incrementer}>click</button>
+        <button onClick={toggler}>toggle</button>
         {/* <Nav />
         <Tweets /> */}
       </div>

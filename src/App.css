@@ -16,7 +16,9 @@
   justify-content: space-around;
   align-items: center;
 }
-
+.active{
+  opacity: 0;
+}
 
 
 
