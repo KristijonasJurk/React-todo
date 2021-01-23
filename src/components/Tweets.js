@@ -1,6 +1,6 @@
 import React from "react";
 //import components
-import Tweet from "./Tweets";
+import Tweet from "./Tweet";
 
 const Tweets = (props) => (
     <div>
