@@ -3,14 +3,18 @@ import React from "react";
 import Tweet from "./Tweet";
 
 const Tweets = (props) => {
-    const tweets = [{ name: 'tom', tweet: 'very cool' },
-    { name: 'brian', tweet: 'helouuuuuuuuuuuuuuuu' },
-    { name: 'george', tweet: 'i am george hello everybodyyyyy' }]
+    const tweets = [
+        { name: 'tom', tweet: 'very cool' },
+        { name: 'brian', tweet: 'helouuuuuuuuuuuuuuuu' },
+        { name: 'george', tweet: 'i am george hello everybodyyyyy' }
+    ];
     return (
         <section>
-            <Tweet me={props.me} age={props.age} />
+            {tweets.map(tweet => (
+                <Tweet name={tweet.name} tweet={tweet.tweet} />
+            ))}
         </section>
     );
-}:
+}
 
 export default Tweets;
