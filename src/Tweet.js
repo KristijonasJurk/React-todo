@@ -1,12 +1,12 @@
 import React from 'react';
 import "./App.css";
 
-function Tweet({ title }) {
+function Tweet({ title, message }) {
     return (
 
         <div className='box'>
             <h1>{title}</h1>
-            <p>some text</p>
+            <p>{message}</p>
             <h3>some other text</h3>
         </div>
     )
