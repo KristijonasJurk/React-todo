@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Tweet = () => {
+const Tweet = (props) => (
     <div>
-        <h1>ssss</h1>
-        <p>dddd</p>
-        <h3>some other text</h3>
+        <h1>{props.me}</h1>
+        <h3>{props.age}</h3>
     </div>
-};
+);
 
 export default Tweet;

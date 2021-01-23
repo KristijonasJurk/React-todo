@@ -9,17 +9,14 @@ import Tweets from "./components/Tweets";
 
 function App() {
 
-  const name = 'developed';
-  const age = 26;
-
   return (
     <div className="app">
       <div className="home">
         <Nav />
-        <Tweets me={name} age={age} />
+        <Tweets />
       </div>
     </div>
-  )
+  );
 }
 
 export default App;
