@@ -6,9 +6,9 @@
 /* .app {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
 } */
 .home {
+  flex-wrap: wrap;
   background-color: lightblue;
   color: white;
   min-height: 100vh;

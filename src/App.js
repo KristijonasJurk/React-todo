@@ -3,8 +3,8 @@ import "./App.css";
 import React, { useState } from 'react';
 
 // import components
-// import Nav from "./components/Nav";
-// import Tweets from "./components/Tweets";
+import Nav from "./components/Nav";
+import Video from "./components/Video";
 
 
 function App() {
@@ -27,6 +27,8 @@ function App() {
         <h2>counter {counter}</h2>
         <button onClick={incrementer}>click</button>
         <button onClick={toggler}>toggle</button>
+        <Nav setToggle={setToggle} />
+        <Video nr={counter} />
         {/* <Nav />
         <Tweets /> */}
       </div>
