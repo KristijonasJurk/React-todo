@@ -1,4 +1,3 @@
-// import React from "react";
 import "./App.css";
 import React, { useState } from 'react';
 
@@ -63,14 +62,14 @@ function App() {
   return (
     <div className="app">
       <div className="todo-list">
-        {todos.map((todo, index) => (
+        {todos.map((todo, index) =>
           <Todo
             index={index}
             todo={todo}
             completeTodo={completeTodo}
             deleteTodo={deleteTodo}
           />
-        ))}
+        )}
       </div>
       <TodoForm
         addTodo={addTodo}
