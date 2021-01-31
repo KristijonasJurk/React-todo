@@ -2,7 +2,19 @@
 import "./App.css";
 import React, { useState } from 'react';
 
-
+function Todo({ todo, index }) {
+  return (
+    <div style={{
+      textDecoration: todo.isComplete ? 'line-through' : ''
+    }}>
+      { todo.text}
+      < div >
+        <button>delete</button>
+        <button>complete</button>
+      </div >
+    </div >
+  )
+}
 
 
 function App() {
@@ -24,14 +36,14 @@ function App() {
 
   return (
     <div className="app">
-      {todos.map((todo, index) =>
-        <div className="todo-list">
+      <div className="todo-list">
+        {todos.map((todo, index) => (
           <Todo
             index={index}
             todo={todo}
-          ></Todo>
-        </div>
-      )}
+          />
+        ))}
+      </div>
     </div>
   );
 }
