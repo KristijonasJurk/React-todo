@@ -4,34 +4,32 @@ import React, { useState } from 'react';
 
 function Todo({ todo, index, completeTodo, deleteTodo }) {
   return (
-    <div style={{
-      textDecoration: todo.isComplete ? 'line-through' : ''
-    }}>
+    <div style={{ textDecoration: todo.isComplete ? 'line-through' : '' }}>
       {todo.text}
       < div >
-        <button onClick={deleteTodo}>delete</button>
-        <button onClick={completeTodo}>complete</button>
+        <button onClick={() => deleteTodo(index)}>delete</button>
+        <button onClick={() => completeTodo(index)}>complete</button>
       </div >
     </div >
   )
 }
 function TodoForm({ addTodo }) {
   const [value, setValue] = useState('');
-  function handleSubmit(e) {
+  const handleSubmit = e => {
     e.preventDefault();
-    if (!value) { return; }
-    addTodo(value)
-    setValue('')
+    if (!value) return;
+    addTodo(value);
+    setValue('');
   }
-  requestAnimationFrame(
+  return (
     <form onSubmit={handleSubmit}>
-      <input type="text" />
+      <input type="text" value={value} onChange={e => setValue(e.target.value)} />
     </form>
   )
 }
 
 function App() {
-  const [todos, setTodos] = useState(
+  const [todos, setTodos] = useState([
     {
       text: 'hellooooo',
       isComplete: false
@@ -44,7 +42,7 @@ function App() {
       text: 'hiiiiiiiii',
       isComplete: false
     }
-  )
+  ])
 
   function addTodo(text) {
     const newTodo = [...todos, { text }]
@@ -52,12 +50,12 @@ function App() {
   }
 
   function deleteTodo(index) {
-    const newTodo = [...todo];
+    const newTodo = [...todos];
     newTodo[index].isComplete = true;
     setTodos(newTodo)
   }
   function completeTodo(index) {
-    const newTodo = [...todo];
+    const newTodo = [...todos];
     newTodo.splice(index, 1);
     setTodos(newTodo)
   }
